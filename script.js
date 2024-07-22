@@ -45,13 +45,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showSlides() {
         const slides = document.getElementsByClassName('mySlides');
+        const dots = document.getElementsByClassName('dot');
         for (let i = 0; i < slides.length; i++) {
             slides[i].style.display = 'none';
         }
         slideIndex++;
         if (slideIndex > slides.length) { slideIndex = 1; }
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(' active', '');
+        }
         slides[slideIndex - 1].style.display = 'block';
-        setTimeout(showSlides, 3000); // Change image every 3 seconds
+        dots[slideIndex - 1].className += ' active';
+        setTimeout(showSlides, 7000); // Change image every 7 seconds
+    }
+
+    const dots = document.getElementsByClassName('dot');
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].addEventListener('click', function() {
+            currentSlide(i + 1);
+        });
+    }
+
+    function currentSlide(n) {
+        const slides = document.getElementsByClassName('mySlides');
+        const dots = document.getElementsByClassName('dot');
+        if (n > slides.length) { slideIndex = 1; }
+        if (n < 1) { slideIndex = slides.length; }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(' active', '');
+        }
+        slides[slideIndex - 1].style.display = 'block';
+        dots[slideIndex - 1].className += ' active';
     }
 
     const projects3DCG = document.querySelectorAll('.project-3dcg');

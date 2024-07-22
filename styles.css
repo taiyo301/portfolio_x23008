@@ -9,6 +9,7 @@ body {
     background: #f4f4f4;
     color: #333;
     overflow-x: hidden;
+    position: relative;
 }
 
 .container {
@@ -16,12 +17,8 @@ body {
     max-width: 1100px;
     margin: auto;
     overflow: hidden;
-}
-
-.container-full {
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
+    position: relative;
+    z-index: 2;
 }
 
 header {
@@ -30,6 +27,7 @@ header {
     padding: 1rem 0;
     text-align: center;
     position: relative;
+    z-index: 2;
 }
 
 header h1 {
@@ -81,7 +79,60 @@ nav ul li a {
     transition: 0.3s;
 }
 
-#profile, #my3dcg, #mydesign {
+#profile {
+    padding: 2rem 0;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 2rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-text {
+    max-width: 600px;
+}
+
+.profile-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.profile-text p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    color: #333;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #A09797;
+}
+
+#my3dcg, #mydesign {
     padding: 2rem 0;
     text-align: center;
 }
@@ -91,12 +142,17 @@ nav ul li a {
     color: #fff;
     padding: 2rem 0;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
-#profile .profile-img {
-    width: 150px;
-    height: auto;
-    margin-bottom: 1rem;
+#contact a {
+    color: #1E90FF; /* リンクの色を変更 */
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
 }
 
 /* Section Heading */
@@ -380,32 +436,31 @@ footer {
     color: #4CAF50;
 }
 
-#contact a {
-    color: #1E90FF; /* リンクの色を変更 */
-    text-decoration: none;
-}
-
-#contact a:hover {
-    text-decoration: underline;
-}
 /* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
     position: relative;
-    margin: auto;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
 }
 
 /* Hide the images by default */
 .mySlides {
     display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Fade animation */
 .fade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
+    -webkit-animation-duration: 3s;
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 3s;
 }
 
 @-webkit-keyframes fade {
@@ -419,6 +474,14 @@ footer {
 }
 
 /* Dots/bullets/indicators */
+.dot-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
 .dot {
     height: 15px;
     width: 15px;

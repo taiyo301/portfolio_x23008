@@ -29,39 +29,52 @@
         </div>
     </header>
 
+    <section id="slideshow">
+        <div class="slideshow-container">
+            <div class="mySlides fade" style="background-image: url('meisi1.png');"></div>
+            <div class="mySlides fade" style="background-image: url('meisi2.png');"></div>
+            <div class="mySlides fade" style="background-image: url('home.png');"></div>
+        </div>
+        <div class="dot-container">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+    </section>
+
     <section id="profile">
         <div class="container">
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="meisi1.png" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <img src="meisi2.png" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <img src="home.png" style="width:100%">
-                </div>
-                <!-- Dots/bullets/indicators -->
-                <div style="text-align:center">
-                    <span class="dot"></span> 
-                    <span class="dot"></span> 
-                    <span class="dot"></span> 
+            <div class="profile-content">
+                <img src="home.png" alt="プロフィール画像" class="profile-img">
+                <div class="profile-text">
+                    <h2>NAME　TAIYO</h2>
+                    <p>愛知県の大学に在学しています。3DCGやデザインに興味があり、たくさんの技術を学んでいます。</p>
+                    <p>上のスライドショーのアイコンが私の持っているスキルです。</p>
+                    <p>・illustrator・photoshop・aftereffect・Xd・MAYA・blender</p>
+                    <p>以下のリンクは私のSNSと連絡先です。</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/yourprofile" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.twitter.com/yourprofile" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/yourprofile" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="mailto:aaaaaa@icloud.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
             </div>
-            <p>私は課題くんです。ウェブ開発者として働いています。</p>
         </div>
     </section>
 
     <section id="my3dcg">
         <div class="container">
             <h2 class="section-heading">MY 3D&CG</h2>
-            <div class="project-3dcg" data-description="説明文1">
+            <div class="project-3dcg" data-description="この作品は、大学の授業内で作ったものです。左：人のモデル　右：ロボットモデル
+            <作成時間3時間>">
                 <img src="hito.png" alt="3D&CG作品1">
             </div>
-            <div class="project-3dcg" data-description="説明文2">
+            <div class="project-3dcg" data-description="この作品は、高校生の時にゲームアプリを作り、その時に使用したモデルです。　<作成時間5時間>">
                 <img src="otama.png" alt="3D&CG作品2">
             </div>
-            <div class="project-3dcg" data-description="説明文3">
+            <div class="project-3dcg" data-description="この作品は、大学の授業内で作ったものです。魚のモデルになります。
+            <作成時間5時間>">
                 <img src="sakana.png" alt="3D&CG作品3">
             </div>
         </div>
@@ -72,22 +85,22 @@
             <h2 class="section-heading center-heading">MY PHOTO</h2>
             <div class="grid-container">
                 <div class="project-photo">
-                    <img src="kesiki1.png" alt="写真作品1" data-description="説明文1">
+                    <img src="kesiki1.png" alt="写真作品1" data-description="雨の日の夜道路と車">
                 </div>
                 <div class="project-photo">
-                    <img src="kesiki2.png" alt="写真作品2" data-description="説明文2">
+                    <img src="kesiki2.png" alt="写真作品2" data-description="渋谷ヒカリエの夜景と歩道橋">
                 </div>
                 <div class="project-photo">
-                    <img src="kesiki3.png" alt="写真作品3" data-description="説明文3">
+                    <img src="kesiki3.png" alt="写真作品3" data-description="シアトルのスペースニードル">
                 </div>
                 <div class="project-photo">
-                    <img src="kesiki4.png" alt="写真作品4" data-description="説明文4">
+                    <img src="kesiki4.png" alt="写真作品4" data-description="サイゴン川とビル群">
                 </div>
                 <div class="project-photo">
-                    <img src="kesiki5.png" alt="写真作品5" data-description="説明文5">
+                    <img src="kesiki5.png" alt="写真作品5" data-description="開発中の渋谷駅">
                 </div>
                 <div class="project-photo">
-                    <img src="kesiki6.png" alt="写真作品6" data-description="説明文6">
+                    <img src="kesiki6.png" alt="写真作品6" data-description="工事中の大阪とビル群と連絡通路">
                 </div>
             </div>
         </div>
@@ -96,10 +109,12 @@
     <section id="mydesign">
         <div class="container">
             <h2 class="section-heading">MY DESIGN</h2>
-            <div class="project-design" data-description="説明文1">
+            <div class="project-design" data-description="この作品は、授業内で作ったレインボーのキューブです。
+            <作成時間30分>">
                 <img src="qu-bu.png" alt="デザイン作品1">
             </div>
-            <div class="project-design" data-description="説明文2">
+            <div class="project-design" data-description="この作品は、課題でコマ動画を撮った際の一部です。
+            <作成時間1時間>">
                 <img src="tori.png" alt="デザイン作品2">
             </div>
         </div>
