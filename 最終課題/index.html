@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="site-title">Portfolio</h1>
+            <nav>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul id="nav-list">
+                    <li><a href="#profile">プロフィール</a></li>
+                    <li><a href="#my3dcg">MY 3D&CG</a></li>
+                    <li><a href="#myphoto">MY PHOTO</a></li>
+                    <li><a href="#mydesign">MY DESIGN</a></li>
+                    <li><a href="#contact">連絡先</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="profile">
+        <div class="container">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="meisi1.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="meisi2.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="home.png" style="width:100%">
+                </div>
+                <!-- Dots/bullets/indicators -->
+                <div style="text-align:center">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                </div>
+            </div>
+            <p>私は課題くんです。ウェブ開発者として働いています。</p>
+        </div>
+    </section>
+
+    <section id="my3dcg">
+        <div class="container">
+            <h2 class="section-heading">MY 3D&CG</h2>
+            <div class="project-3dcg" data-description="説明文1">
+                <img src="hito.png" alt="3D&CG作品1">
+            </div>
+            <div class="project-3dcg" data-description="説明文2">
+                <img src="otama.png" alt="3D&CG作品2">
+            </div>
+            <div class="project-3dcg" data-description="説明文3">
+                <img src="sakana.png" alt="3D&CG作品3">
+            </div>
+        </div>
+    </section>
+
+    <section id="myphoto">
+        <div class="container-full">
+            <h2 class="section-heading center-heading">MY PHOTO</h2>
+            <div class="grid-container">
+                <div class="project-photo">
+                    <img src="kesiki1.png" alt="写真作品1" data-description="説明文1">
+                </div>
+                <div class="project-photo">
+                    <img src="kesiki2.png" alt="写真作品2" data-description="説明文2">
+                </div>
+                <div class="project-photo">
+                    <img src="kesiki3.png" alt="写真作品3" data-description="説明文3">
+                </div>
+                <div class="project-photo">
+                    <img src="kesiki4.png" alt="写真作品4" data-description="説明文4">
+                </div>
+                <div class="project-photo">
+                    <img src="kesiki5.png" alt="写真作品5" data-description="説明文5">
+                </div>
+                <div class="project-photo">
+                    <img src="kesiki6.png" alt="写真作品6" data-description="説明文6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mydesign">
+        <div class="container">
+            <h2 class="section-heading">MY DESIGN</h2>
+            <div class="project-design" data-description="説明文1">
+                <img src="qu-bu.png" alt="デザイン作品1">
+            </div>
+            <div class="project-design" data-description="説明文2">
+                <img src="tori.png" alt="デザイン作品2">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>連絡先</h2>
+            <p>Email: <a href="mailto:aaaaaa@icloud.com">aaaaaaa@icloud.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile">MYプロフィール</a></p>
+            <p>
+                <a href="https://www.instagram.com/yourprofile" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com/yourprofile" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/yourprofile" class="social-icon"><i class="fab fa-facebook"></i></a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 kadaikun.</p>
+        </div>
+    </footer>
+
+    <div id="menu-overlay" class="overlay">
+        <div class="overlay-content">
+            <a href="#" class="close">&times;</a>
+            <a href="#profile">ホーム</a>
+            <a href="#my3dcg">MY 3D&CG</a>
+            <a href="#myphoto">MY PHOTO</a>
+            <a href="#mydesign">MY DESIGN</a>
+            <a href="#contact">連絡先</a>
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="caption" id="lightbox-caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
