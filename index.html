@@ -34,18 +34,19 @@
             <div class="mySlides fade" style="background-image: url('meisi1.png');"></div>
             <div class="mySlides fade" style="background-image: url('meisi2.png');"></div>
             <div class="mySlides fade" style="background-image: url('home.png');"></div>
-        </div>
-        <div class="dot-container">
-            <span class="dot"></span> 
-            <span class="dot"></span> 
-            <span class="dot"></span> 
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        
         </div>
     </section>
 
     <section id="profile">
         <div class="container">
             <div class="profile-content">
-                <img src="home.png" alt="プロフィール画像" class="profile-img">
+                <img src="me.jpg" alt="プロフィール画像" class="profile-img">
                 <div class="profile-text">
                     <h2>NAME　TAIYO</h2>
                     <p>愛知県の大学に在学しています。3DCGやデザインに興味があり、たくさんの技術を学んでいます。</p>
@@ -67,15 +68,21 @@
         <div class="container">
             <h2 class="section-heading">MY 3D&CG</h2>
             <div class="project-3dcg" data-description="この作品は、大学の授業内で作ったものです。左：人のモデル　右：ロボットモデル
-            <作成時間3時間>">
+            ＜作成時間3時間＞">
+                <button class="tap-button"><i class="fas fa-hand-pointer"></i></button>
                 <img src="hito.png" alt="3D&CG作品1">
+                <button class="tap-button"><i class="fas fa-hand-pointer"></i></button>
             </div>
-            <div class="project-3dcg" data-description="この作品は、高校生の時にゲームアプリを作り、その時に使用したモデルです。　<作成時間5時間>">
+            <div class="project-3dcg" data-description="この作品は、高校生の時にゲームアプリを作り、その時に使用したモデルです。　＜作成時間5時間＞">
+                <button class="tap-button"><i class="fas fa-hand-pointer"></i></button>
                 <img src="otama.png" alt="3D&CG作品2">
+                <button class="tap-button"><i class="fas fa-hand-pointer"></i></button>
             </div>
             <div class="project-3dcg" data-description="この作品は、大学の授業内で作ったものです。魚のモデルになります。
-            <作成時間5時間>">
+            ＜作成時間5時間＞">
+                <button class="tap-button"><i class="fas fa-hand-pointer"></i></button>
                 <img src="sakana.png" alt="3D&CG作品3">
+                <button class="tap-button"><i class="fas fa-hand-pointer"></i></button>
             </div>
         </div>
     </section>
@@ -86,21 +93,27 @@
             <div class="grid-container">
                 <div class="project-photo">
                     <img src="kesiki1.png" alt="写真作品1" data-description="雨の日の夜道路と車">
+                    <button class="zoom-button"><i class="fas fa-plus"></i></button>
                 </div>
                 <div class="project-photo">
                     <img src="kesiki2.png" alt="写真作品2" data-description="渋谷ヒカリエの夜景と歩道橋">
+                    <button class="zoom-button"><i class="fas fa-plus"></i></button>
                 </div>
                 <div class="project-photo">
                     <img src="kesiki3.png" alt="写真作品3" data-description="シアトルのスペースニードル">
+                    <button class="zoom-button"><i class="fas fa-plus"></i></button>
                 </div>
                 <div class="project-photo">
                     <img src="kesiki4.png" alt="写真作品4" data-description="サイゴン川とビル群">
+                    <button class="zoom-button"><i class="fas fa-plus"></i></button>
                 </div>
                 <div class="project-photo">
                     <img src="kesiki5.png" alt="写真作品5" data-description="開発中の渋谷駅">
+                    <button class="zoom-button"><i class="fas fa-plus"></i></button>
                 </div>
                 <div class="project-photo">
                     <img src="kesiki6.png" alt="写真作品6" data-description="工事中の大阪とビル群と連絡通路">
+                    <button class="zoom-button"><i class="fas fa-plus"></i></button>
                 </div>
             </div>
         </div>
@@ -110,12 +123,16 @@
         <div class="container">
             <h2 class="section-heading">MY DESIGN</h2>
             <div class="project-design" data-description="この作品は、授業内で作ったレインボーのキューブです。
-            <作成時間30分>">
+            ＜作成時間30分＞">
+                <button class="tap-button"><i class="fas fa-hand-pointer"></i></button>
                 <img src="qu-bu.png" alt="デザイン作品1">
+                <button class="tap-button"><i class="fas fa-hand-pointer"></i></button>
             </div>
             <div class="project-design" data-description="この作品は、課題でコマ動画を撮った際の一部です。
-            <作成時間1時間>">
+            ＜作成時間1時間＞">
+                <button class="tap-button"><i class="fas fa-hand-pointer"></i></button>
                 <img src="tori.png" alt="デザイン作品2">
+                <button class="tap-button"><i class="fas fa-hand-pointer"></i></button>
             </div>
         </div>
     </section>
@@ -151,7 +168,7 @@
     </div>
 
     <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
+        <span class="close"><i class="fas fa-minus"></i></span>
         <img class="lightbox-content" id="lightbox-img">
         <div class="caption" id="lightbox-caption"></div>
     </div>

@@ -1,4 +1,45 @@
 document.addEventListener('DOMContentLoaded', function() {
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        const slides = document.getElementsByClassName('mySlides');
+        const dots = document.getElementsByClassName('dot');
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(' active', '');
+        }
+        slides[slideIndex - 1].style.display = 'block';
+        dots[slideIndex - 1].className += ' active';
+        setTimeout(showSlides, 3000); 
+    }
+
+    const dots = document.getElementsByClassName('dot');
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].addEventListener('click', function() {
+            currentSlide(i + 1);
+        });
+    }
+
+    function currentSlide(n) {
+        const slides = document.getElementsByClassName('mySlides');
+        const dots = document.getElementsByClassName('dot');
+        if (n > slides.length) { slideIndex = 1; }
+        if (n < 1) { slideIndex = slides.length; }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(' active', '');
+        }
+        slides[n - 1].style.display = 'block';
+        dots[n - 1].className += ' active';
+    }
+
     const navItems = document.querySelectorAll('nav ul li a');
     const mobileMenu = document.getElementById('mobile-menu');
     const overlay = document.getElementById('menu-overlay');
@@ -37,49 +78,6 @@ document.addEventListener('DOMContentLoaded', function() {
             overlay.style.height = "0%";
         }
     }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    let slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-        const slides = document.getElementsByClassName('mySlides');
-        const dots = document.getElementsByClassName('dot');
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = 'none';
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1; }
-        for (let i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(' active', '');
-        }
-        slides[slideIndex - 1].style.display = 'block';
-        dots[slideIndex - 1].className += ' active';
-        setTimeout(showSlides, 7000); // Change image every 7 seconds
-    }
-
-    const dots = document.getElementsByClassName('dot');
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].addEventListener('click', function() {
-            currentSlide(i + 1);
-        });
-    }
-
-    function currentSlide(n) {
-        const slides = document.getElementsByClassName('mySlides');
-        const dots = document.getElementsByClassName('dot');
-        if (n > slides.length) { slideIndex = 1; }
-        if (n < 1) { slideIndex = slides.length; }
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = 'none';
-        }
-        for (let i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(' active', '');
-        }
-        slides[slideIndex - 1].style.display = 'block';
-        dots[slideIndex - 1].className += ' active';
-    }
 
     const projects3DCG = document.querySelectorAll('.project-3dcg');
     const projectsDesign = document.querySelectorAll('.project-design');
@@ -88,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const lightboxCaption = document.getElementById('lightbox-caption');
     const lightboxClose = document.querySelector('.lightbox .close');
     const projectPhotos = document.querySelectorAll('.project-photo img');
+    const zoomButtons = document.querySelectorAll('.zoom-button');
 
     projects3DCG.forEach(project => {
         const descriptionText = project.getAttribute('data-description');
@@ -110,6 +109,15 @@ document.addEventListener('DOMContentLoaded', function() {
             lightbox.style.display = 'block';
             lightboxImg.src = this.src;
             lightboxCaption.innerText = this.getAttribute('data-description');
+        });
+    });
+
+    zoomButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const photo = this.previousElementSibling || this.nextElementSibling;
+            lightbox.style.display = 'block';
+            lightboxImg.src = photo.src;
+            lightboxCaption.innerText = photo.getAttribute('data-description');
         });
     });
 
